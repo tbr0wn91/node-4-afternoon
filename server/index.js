@@ -10,7 +10,7 @@ const authController = require('./controllers/authController');
 const cartController = require('./controllers/cartController');
 const searchController = require('./controllers/searchController');
 
-
+app.use(express.static(`${__dirname}/../build`));
 app.use(
     session({
         secret: SESSION_SECRET,
